@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+:root {
+    --color-background: #8ECAE6;
+    --color-btn: rgb(20, 125, 170);
+}
+
+body {
+    background-color: var(--color-background);
+}
+
+.container {
+    width: 70vw;
+    height: 90vh;
+
+    display: flex;
+    gap: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.left {
+    width: 22%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    overflow: hidden;
+}
+
+.left h2 {
+    font-size: 1.375rem;
+    margin: 20px auto 16px;
+}
+
+.hr {
+    width: 66%;
+    margin: 10px auto;
+}
+
+.right {
+    width: 70%;
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 40px 30px;
+    position: relative;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+}
+
+#input {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48,
+
+}
+
+.input-form>span {
+    /* width: 100px;*/
+    font-size: 30px;
+    position: absolute;
+    margin: 10px;
+    color: var(--color-btn);
+}
+
+#input::placeholder {
+    font-size: 1.5rem;
+    padding-left: 70px;
+}
+
+.input-btn {
+    width: 110px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--color-btn);
+    color: #ffffff;
+    font-size: 1.375rem;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 72%;
+    margin-top: -45px;
+}
+
+.btns * {
+    border: none;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    margin: 20px  0 30px;
+    cursor: pointer;
+}
+
+.btns :not(:first-child) {
+    margin-left: 20px;
+}
+
+/* *  styles for element from JS */
+#employees-list {
+    height: 86%;
+    overflow-y: scroll;
+}
+
+.single-user-info {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 100%;
+    height: 45px;
+    font-size: 1.375rem;
+    cursor: pointer;
+    /* background-color: #ffffff; */
+
+}
+
+.single-user-info:hover {
+    background-color: var(--color-background);
+}
+
+.user-name {
+    margin-right: 15px;
+}
+
+.todo-form {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    /* font-size: 1rem; */
+    border-bottom: 1px solid lightblue;
+}
+#todo-txt{
+    font-size: 1.25rem;
+}
+.todo-form:hover{
+background-color: #C2D0E3;
+}
+.todo-form span {
+    font-size: 30px;
+}
+#todo-txt{
+    width: 80%;
+    margin-left: 20px;
+}
+.delete,
+.edit{
+
+    cursor: pointer;
+}
+.delete:hover{
+    color: red;
+}
+.edit:hover{
+    color: green;
+}
+.wellcome-text{
+    width: 400px;
+    margin: 20%;
+}
+.completed{
+    text-decoration: line-through;
+}
+.single-user-info.active{
+    background-color: rgb(20, 125, 170);
+}
+
+/* .input-btn{
+    
+} */
