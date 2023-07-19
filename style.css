@@ -42,7 +42,16 @@ body {
     font-size: 1.375rem;
     margin: 20px auto 16px;
 }
-
+#employees-list{
+    display: flex;
+    flex-direction: column;
+}
+.single-user-div{
+    height: 100px ;
+    margin-top: 5px;
+    font-size: 1.3rem;
+    background-color: yellow;
+}
 .hr {
     width: 66%;
     margin: 10px auto;
