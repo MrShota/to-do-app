@@ -10,38 +10,25 @@ fetch('https://dummyjson.com/users')
     .then(res => res.json())
     .then(allUser => {
         const users = allUser.users
-        // console.log(users)
-
         for (user of users) {
             const singleUserDiv = document.createElement('div');
             singleUserDiv.classList.add('single-user-div');
-            singleUserDiv.innerText = user.firstName + user.lastName;
+            singleUserDiv.innerText = user.firstName + ' ' + user.lastName;
             employeesList.append(singleUserDiv);
-            let id = user.id;
-            singleUserDiv.addEventListener('click', function () {
-                getTodo(id)
-            });
+            let userId = user.userId;
+            console.log(userId)
+            // singleUserDiv.addEventListener('click', function () {
+            //     fetch('https://dummyjson.com/todos')
+            //         .then(res => res.json())
+            //         .then(allTodo => {
+            //             const todo = allTodo.todos[userId];
+            //             const singleUserTodo = document.createElement('div')
+
+            //             singleUserTodo.append(todo.todo);
+            //             toDoList.append(singleUserTodo)
+            //             console.log(todo)
+
+            //         })
+            // });
         }
-
-
     });
-
-function getTodo(id) {
-
-    console.log(id)
-    fetch('https://dummyjson.com/todos')
-        .then(res => res.json())
-        .then(allTodo => {
-            console.log(allTodo.todos)
-
-
-
-
-
-            const singleUserTodo = document.createElement('div');
-            singleUserTodo.innerText = id;
-            toDoList.append(singleUserTodo)
-
-        })
-
-}
