@@ -15,25 +15,25 @@ fetch('https://dummyjson.com/users')
             singleUserDiv.setAttribute('id', 'singleUserDiv')
             singleUserDiv.classList.add('single-user-div');
             singleUserDiv.innerText = user.firstName + ' ' + user.lastName;
-            const userId = user.id;
             // console.log(user)
             employeesList.append(singleUserDiv);
             singleUserDiv.addEventListener('click', function () {
-                // getAllTodo(userId)
+                getAllTodo()
             })
         }
     });
 
-// function getAllTodo(id) {
-fetch('https://dummyjson.com/todos')
-    .then(res => res.json())
-    .then(allTodo => {
-        console.log(allTodo.todos)
-        for (userId in allTodo.todos) {
-            console.log()
-        }
+function getAllTodo(id) {
+    fetch('https://dummyjson.com/todos')
+        .then(res => res.json())
+        .then(allTodo => {
+            console.log(allTodo.todos[id].userId)
+            // const userId = allTodo.todos[id].userId;
+            // // toDoList.innerText = allTodo.todos[userId]
+            // console.log(allTodo.todos.todo)
 
 
-        // toDoList.innerText = allTodo.todos[id].todo
-    })
-// }
+
+            // toDoList.innerText = allTodo.todos[id].todo
+        })
+}
