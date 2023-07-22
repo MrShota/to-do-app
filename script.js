@@ -17,23 +17,17 @@ fetch('https://dummyjson.com/users')
             singleUserDiv.innerText = user.firstName + ' ' + user.lastName;
             // console.log(user)
             employeesList.append(singleUserDiv);
-            singleUserDiv.addEventListener('click', function () {
-                getAllTodo()
-            })
+            // singleUserDiv.addEventListener('click', function () {
+            //     getAllTodo()
+            // })
         }
     });
 
-function getAllTodo(id) {
+// function getAllTodo(id) {
     fetch('https://dummyjson.com/todos')
         .then(res => res.json())
         .then(allTodo => {
-            console.log(allTodo.todos[id].userId)
-            // const userId = allTodo.todos[id].userId;
-            // // toDoList.innerText = allTodo.todos[userId]
-            // console.log(allTodo.todos.todo)
-
-
-
-            // toDoList.innerText = allTodo.todos[id].todo
+            console.log(allTodo.todos[2])
+        
         })
-}
+// }
