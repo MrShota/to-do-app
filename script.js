@@ -26,7 +26,7 @@ fetch('https://dummyjson.com/todos')
         // console.log(allTodo.todos[2])
         const todos = allTodo.todos
         for (todo of todos) {
-            console.log(todo.todo)
+            console.log(todo)
         }
 
     })
